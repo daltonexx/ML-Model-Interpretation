@@ -23,6 +23,7 @@ df['Sex'] = label_encoder.fit_transform(df['Sex'])  # M=1, F=0
 
 df = pd.get_dummies(df, columns=['ChestPainType', 'RestingECG', 'ExerciseAngina', 'ST_Slope'], drop_first=True)
 
+# aqui a gente dropa a coluna que a gente quer prever
 X = df.drop(columns=['HeartDisease'])
 Y = df['HeartDisease']
 
